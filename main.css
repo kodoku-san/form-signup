@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+*::before, *::after{
+	padding: 0;
+	margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #123456;
+}
+
+.signup {
+    max-width: 320px;
+    width: calc(100% - 32px);
+    height: 680px;
+    background-color: #364f6b;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-overlay {
+    position: absolute;
+    z-index: 0;
+}
+
+.signup-overlay.red {
+    top: -52px;
+    left: -52px;
+    background-color: #fc5185;
+    width: 100px;
+    height: 200px;
+    transform: rotate(26deg);
+}
+
+.signin .signup-overlay.red {
+    top: -188px;
+    left: -22px;
+    background-color: #fc5185;
+    width: 135px;
+    height: 410px;
+    transform: rotate(57deg);
+}
+
+.signup-overlay.green {
+    bottom: 0;
+    left: 0;
+    background-color: #40a4a0;
+    width: 100%;
+    height: 66.66667%;
+}
+
+.signin .signup-overlay.green {
+    height: 87%;
+    background: #364f6b;
+}
+
+.signin .signup-overlay.white {
+    height: 201px;
+}
+
+.overlay-signup {
+    position: absolute;
+    z-index: -1;
+}
+
+.green .overlay-signup {
+    top: -45px;
+    left: -69px;
+    width: calc(100% + 82px);
+    height: 150px;
+    background-color: #364f6b;
+    transform: rotate(-21deg);
+}
+
+.signup-overlay.white {
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 180px;
+}
+
+.white .overlay-signup {
+    top: -45px;
+    left: -11px;
+    width: calc(100% + 82px);
+    height: 101px;
+    background-color: #40a4a0;
+    transform: rotate(17deg);
+}
+
+.signin .white .overlay-signup {
+    background: #364f6b;
+    transform: rotate(-14deg);
+    height: 180px;
+    top: -154px;
+    left: -54px;
+}
+
+.signup-head {
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 46px;
+    font-family: system-ui;
+}
+
+.signup-form {
+    z-index: 1;
+    margin-top: 186px;
+    max-width: 270px;
+    width: calc(100% - 32px);
+}
+
+.signup-form-group {
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.signup-form-group__label {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    color: #e8eaed;
+    transition: 0.3s ease;
+    z-index: -1;
+}
+
+.signup-form-group__input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #e8eaed;
+    outline: none;
+    padding: 0 4px 4px 4px;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.signup-form-group__input:not(:placeholder-shown) + .signup-form-group__label,
+.signup-form-group__input:focus + .signup-form-group__label {
+    top: -32px;
+    left: 0;
+    color: white;
+    z-index: unset;
+    cursor: pointer;
+    user-select: none;
+}
+
+.signup-form-group__foot {
+    text-align: right;
+}
+
+.signup-form-group__btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #fce38a;
+}
+
+.signup-form-group__btn span {
+    position: relative;
+    right: 62px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.signin .signup-form-group__btn span {
+    right: 34px;
+}
+
+.signup-foot {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.signup-foot-signin {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+}
+
+.signup-foot-signin::before {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    border-radius: 16px;
+    opacity: 0;
+    background-color: currentColor;
+    transition: 0.2s ease;
+    transform-origin: left;
+}
+
+.signup-foot-signin:hover::before {
+    width: 100%;
+    opacity: 1;
+}
